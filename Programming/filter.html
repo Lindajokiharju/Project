@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Filter</title>
+    <link rel="filter" href="filter.js">
+</head>
+<body>
+    <div class="float-left" style="width:49%; float: left;">
+    <h1>Kick Ass Kicks</h1>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for name..">
+    </div>
+
+    <div class="float-right" style="width:49%; float: right;">
+    
+    <table id="myTable">
+                <thead>
+                    <tr>
+                        <th><b>Style name</b></th>
+                        <th>   
+                             <select name="color" id="colorInput">
+                                <option value="black">Black</option>
+                                <option value="white">White</option>
+                                <option value="nude">Nude</option>
+                                <option value="red">Red</option>
+                            </select>
+                        </th>
+                    
+                        <th>
+                            <select name="size" id="sizeInput">
+                                <option value="37">37 </option>
+                                <option value="38">38</option>
+                                <option value="39">39</option>
+                                <option value="40">40</option>
+                                <option value="41">41</option>
+                            </select>
+                     
+                        <th>
+                                <select name="Price" id="priceInput">
+                                        <option value="600">600</option>
+                                        <option value="700">700</option>
+                                        <option value="800">800</option>
+                                        <option value="900">900</option>
+                                        <option value="1000">1000</option>
+                                    </select>
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Biker boots</td>
+                        <td>Black</td>
+                        <td>38</td>
+                        <td>800DKK</td>
+                    </tr>
+                    <tr>
+                        <td>Sporty sneaks</td>
+                        <td>White</td>
+                        <td>37, 38, 39, 40</td>
+                        <td>600DKK</td>
+                    </tr>
+                    <tr>
+                        <td>Basic ballerina</td>
+                        <td>Nude</td>
+                        <td>38, 39, 40, 41</td>
+                        <td>700DKK</td>
+                    </tr>
+                    <tr>
+                        <td>Pointed heels</td>
+                        <td>Black</td>
+                        <td>38, 39, 40</td>
+                        <td>1000DKK</td>
+                    </tr>
+                </tbody>
+            </table>
+                <script>        
+                    function myFunction() {
+                      // Declare variables
+                      var input = document.getElementById("myInput");
+                      var filter = input.value.toUpperCase();
+                      var table = document.getElementById("myTable");
+                      var tr = table.getElementsByTagName("tr");
+                    
+                      // Loop through all table rows, and hide those who don't match the search query
+                      for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[0];
+                        if (td) {
+                          if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                          } else {
+                            tr[i].style.display = "none";
+                          }
+                        }
+                      }
+                    }
+                </script>
+               
+
+          
+        </div>  
+    
+</body>
+</html>

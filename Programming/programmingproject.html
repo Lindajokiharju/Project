@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login function</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body background="https://ae01.alicdn.com/kf/HTB1MHrrashmZKJjSZFPq6A5_XXay/Teahoo.jpg_640x640.jpg"></body>
+<body>
+
+    <script>
+        localStorage.setItem('User', 'Emily')
+        console.log (localStorage.getItem('User'))
+        </script>
+
+    <center> <button onclick="alert('Enter your user and password');">Sign in</button> </center>
+    <h3>Sign-in</h3>
+    <h5> Username
+        <input type="text" placeholder="Email address" name="username" id="username" /></h5>
+    <h5> Password <input type="password" placeholder="Password" name="password" id="password" /> </h5>
+    <h3></h3>
+    <center><input type="button" value="Login" name="submit" id="submit" /></center>
+
+    <h3>Sign up</h3>
+    <h5> Email address
+        <input type="text" name="username" id="newUsername" /> </h5>
+    <h5> First name
+        <input type="text" name="firstname" id="firstname" /></h5>
+    <h5> Last name
+        <input type="text" name="lastname" id="lastname" /> </h5>
+
+    <h5>Your Password
+        <input type="password" name="password" id="newPassword" /> </h5>
+    <h5> Password
+        <input type="password" name="Password" id="repeatPassword" /> </h5>
+    <h5> Age
+        <input type="number" value="Age" id="Age" /></h5>
+
+    <center><h6>You need to be 16 or over to shop at our website</h6></center>
+    <h5></h5>
+    <center><input type="button" value="Sign up" name="Sign up" id="Sign up" /></center>
+    <span id="loginResult"></span>
+
+
+    <script src="./20180924_JS.js"></script>
+</body>
+
+</html>

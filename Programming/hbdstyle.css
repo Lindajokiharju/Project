@@ -1,0 +1,11 @@
+h1 {
+    color:white  !important;
+    text-align:center;
+    font-size: 50pt;
+ }
+p{
+ color:white !important;
+ text-align:center;
+ font-size: 30pt;    
+}
+prompt("enter passcode");
